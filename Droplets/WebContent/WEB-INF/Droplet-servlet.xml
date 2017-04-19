@@ -13,6 +13,6 @@
       <property name = "suffix" value = ".jsp" />
    </bean>
  
-   <bean id="distributionData" class="com.droplet.beans.DistributionData" />
+   <bean id="distributionData" class="com.droplet.service.DistributionData" />
    
 </beans>

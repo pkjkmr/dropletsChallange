@@ -1,14 +1,20 @@
-package com.droplet.beans;
+package com.droplet.service;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import com.droplet.beans.Datacenter;
+import com.droplet.beans.Distribution;
+import com.droplet.beans.DistributionSize;
+import com.droplet.beans.Droplet;
+
 public class DistributionData {
 	List<Distribution> list;
 	List<DistributionSize> sizeList;
 	List<Datacenter> dataCenterList;
+	static List<Droplet> dropletList =  new ArrayList<Droplet>();
 	
 	public List<Distribution> getDistributionList() {
 		list = new ArrayList<Distribution>();
@@ -58,4 +64,12 @@ public class DistributionData {
 		return dataCenterList;
 	}
 
+	public List<Droplet> getDroplets(){
+			return dropletList;
+		}
+		
+	
+	public void addDroplets(Droplet droplet){
+		dropletList.add(droplet);
+	}
 }
